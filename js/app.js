@@ -84,7 +84,7 @@ menuItems.forEach(item => {
   });
 })
 
-codice carosello
+//codice carosello
 const data = [
   {
     title: `The fastest <span class="text-primary">dashboard</span> ever`,
