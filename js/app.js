@@ -2,20 +2,20 @@ if (location.hash) {
     history.replaceState("", document.title, location.pathname);
 }
 
-const MINT_DATE = "2023-03-29 16:00:00"
+const MINT_DATE = "2023-04-12 19:00:00"
 let mintDateLocal = moment.utc(MINT_DATE).local().format("DD MMMM HH:mm")
 console.log(moment.utc().local().format("DD MMMM HH:mm"))
-//document.getElementById("mint-date").innerText = mintDateLocal
+document.getElementById("mint-date").innerText = mintDateLocal
 
-//const mintButton = document.getElementById("mint-button");
+const mintButton = document.getElementById("mint-button");
 
-//setInterval(() => {
-//  let localTime = moment.utc().local().format("DD MMMM HH:mm")
-//  if (localTime >= mintDateLocal) {
-//    mintButton.setAttribute('href', 'https://mint.easyzoom.xyz/');
-//    mintButton.classList.remove('disabled')
-//  }
-//}, 1000)
+setInterval(() => {
+  let localTime = moment.utc().local().format("DD MMMM HH:mm")
+  if (localTime >= mintDateLocal) {
+    mintButton.setAttribute('href', 'https://mint.easyzoom.xyz/');
+    mintButton.classList.remove('disabled')
+  }
+}, 1000)
 
 
 // header animation on scroll
